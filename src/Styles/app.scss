@@ -1,0 +1,27 @@
+header {
+  font-size: 18px;
+  align-items: center;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  button {
+    cursor: pointer;
+    padding: 7px;
+    transition: 0.2s;
+    height: 30px;
+    width: 80px;
+    background-color: black;
+    color: white;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 3px;
+    margin: {
+      left: 8px;
+      right: 5px;
+    }
+    &:hover {
+      border: 1px solid black;
+      background-color: rgb(83, 83, 83);
+    }
+  }
+}

@@ -1,0 +1,160 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.leftSide {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+.createButton {
+  cursor: pointer;
+  height: 30px;
+  width: 150px;
+  background-color: #196be8;
+  transition: 0.2s;
+  color: white;
+  border-radius: 3px;
+  border: 1px solid rgb(175, 175, 175);
+  &:hover {
+    border: 1px solid #196be8;
+    background-color: #3e8bff;
+  }
+}
+.delete {
+  color: white;
+  font-size: 16px;
+  background-color: red;
+}
+.update {
+  color: white;
+  font-size: 16px;
+  background-color: #196be8;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  .card {
+    display: inline-flex;
+    font-family: Arial;
+
+    background-color: rgb(252, 252, 252);
+    flex-direction: column;
+    border: solid gray 1px;
+    border-radius: 5px;
+    margin: {
+      top: 20px;
+    }
+    padding: {
+      top: 30px;
+      bottom: 25px;
+    }
+    width: 355px;
+    height: 580px;
+    &:hover {
+      border: black solid 2px;
+    }
+    h3 {
+      font-family: Times;
+    }
+    .imageHolder {
+      width: fit-content;
+      height: fit-content;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+      img {
+        object-fit: contain;
+        width: 200px;
+        height: 150px;
+      }
+    }
+    .contentHolder {
+      height: 370px;
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        margin: {
+          top: -10px;
+          left: auto;
+          right: auto;
+        }
+        width: 80%;
+        button {
+          height: 35px;
+          width: 46%;
+          border: 0;
+          cursor: pointer;
+          border-radius: 0.25rem;
+        }
+      }
+      .description {
+        margin: {
+          bottom: -12px;
+        }
+      }
+      .descriptionHolder {
+        height: 185px;
+        margin: 0;
+        padding: 0;
+        p {
+          background-color: white;
+          text-align: justify;
+          border-radius: 3px;
+          border: solid black 1px;
+          padding: 7px;
+          margin-top: 15px;
+        }
+      }
+
+      .text {
+        h3 {
+          text-align: center;
+          height: 80px;
+        }
+        width: 80%;
+        margin: {
+          left: auto;
+          right: auto;
+        }
+        .discount {
+          color: rgb(219, 0, 0);
+          height: 35px;
+          margin: {
+            top: -15px;
+          }
+        }
+        h4 {
+          span {
+            color: gray;
+            margin: {
+              left: 5px;
+            }
+            text-decoration: line-through;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 800px;
+  }
+}
+@media (max-width: 750px) {
+  .container {
+    max-width: 355px;
+  }
+}
