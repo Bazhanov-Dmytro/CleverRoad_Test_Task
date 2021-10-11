@@ -34,6 +34,11 @@ export default function productValidator(product, img, mode) {
     ) {
       alert("Incorrect discount value.");
       return;
+    } else if (+product.discount === 0 && !product.discountExpiration) {
+      alert(
+        "If you want to disable discount enter data that already passed at expiration date field."
+      );
+      return;
     }
   } else if (
     (!product.discount && mode === "create") ||
