@@ -34,18 +34,18 @@ export default function productValidator(product, img, mode) {
     ) {
       alert("Incorrect discount value.");
       return;
-    } else if (
-      (!product.discount && mode === "create") ||
-      +product.discount === 0
-    ) {
-      product.discount = null;
-      product.discountExpiration = null;
-      return product;
-    } else if (product.discountExpiration) {
-      if (product.discountExpiration <= today) {
-        alert("Discount date is incorrect.");
-        return;
-      }
+    }
+  } else if (
+    (!product.discount && mode === "create") ||
+    +product.discount === 0
+  ) {
+    product.discount = null;
+    product.discountExpiration = null;
+    return product;
+  } else if (product.discountExpiration) {
+    if (product.discountExpiration <= today) {
+      alert("Discount date is incorrect.");
+      return;
     }
   }
 
